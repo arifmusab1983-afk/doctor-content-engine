@@ -17,7 +17,7 @@
 @media(max-width:520px){.folder-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.folder-card{min-height:166px;padding:10px}.folder-art{height:70px;font-size:34px}.folder-title{font-size:13px}.folder-desc{font-size:11px}.folder-cta{font-size:11px}}
 
 .login-wrap{max-width:430px;margin:8vh auto;padding:24px}.login-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:0 12px 35px #1231}.login-card h2{margin:0 0 8px;color:var(--brand2)}.login-card p{color:var(--muted);line-height:1.6}.login-card label{display:block;margin:14px 0 6px;font-weight:600}.login-card input{width:100%;padding:13px;border:1px solid var(--line);border-radius:9px;font:inherit}.login-card button{width:100%;margin-top:18px;padding:13px;border:0;border-radius:9px;background:var(--brand);color:#fff;font:inherit;font-weight:700;cursor:pointer}.login-error{color:#a33b3b;min-height:22px;margin-top:10px}.auth-actions{display:flex;align-items:center;gap:10px}.logout-btn{border:1px solid var(--line);background:#fff;color:var(--brand2);padding:9px 12px;border-radius:8px;cursor:pointer;font:inherit}.cloud-note{font-size:12px;color:var(--muted)}@media(max-width:600px){.login-wrap{margin:5vh 14px;padding:10px}.login-card{padding:20px}}
-</style></head><body><header class="top"><div class="brand"><div class="logo">✚</div><div><b>Doctor Content Engine</b><small>ডাক্তারদের সম্পূর্ণ বাংলা কনটেন্ট সহকারী</small></div></div><div class="auth-actions"><button class="logout-btn" id="logoutBtn" hidden>লগআউট</button><button class="menu" id="menuBtn">☰</button></div></header><div id="loginScreen" class="login-wrap"><div class="login-card"><h2>Doctor Content Engine</h2><p>আপনার নির্ধারিত ইমেইল ও পাসওয়ার্ড দিয়ে প্রবেশ করুন। নতুন অ্যাকাউন্ট খুলতে অ্যাডমিনের সঙ্গে যোগাযোগ করুন।</p><form id="loginForm"><label for="loginEmail">ইমেইল</label><input id="loginEmail" type="email" autocomplete="username" required placeholder="আপনার ইমেইল"><label for="loginPassword">পাসওয়ার্ড</label><input id="loginPassword" type="password" autocomplete="current-password" required placeholder="পাসওয়ার্ড"><button type="submit" id="loginSubmit">লগইন করুন</button><div id="loginError" class="login-error" role="alert"></div></form><div class="cloud-note">আপনার প্রোফাইল ও সেভ করা কনটেন্ট নিরাপদে আপনার অ্যাকাউন্টে সংরক্ষিত হবে।</div></div></div><div class="shell" id="appShell" hidden><aside class="sidebar" id="sidebar"><div class="side-label">মূল মেনু</div><button class="nav active" data-page="home">⌂ <span>ড্যাশবোর্ড</span></button><button class="nav" data-page="profile">♙ <span>১. ডাক্তার প্রোফাইল</span></button><button class="nav" data-page="formulas">▦ <span>২. ১৮টি কনটেন্ট ফর্মুলা</span></button><button class="nav" data-page="learning">▤ <span>৩. AI Learning Guide</span></button><button class="nav" data-page="design">▧ <span>৪. Design Studio</span></button><button class="nav" data-page="gallery">▧ <span>৫. Sample Design Gallery</span></button><button class="nav" data-page="appointment">▣ <span>৬. Appointment Post</span></button><button class="nav" data-page="ads">◉ <span>৭. Facebook Ads Help</span></button><button class="nav" data-page="saved">▣ <span>৮. My Content</span></button><button class="nav" id="adminNav" data-page="admin" hidden>⚙ <span>Admin Panel</span></button><div class="sidebar-note">আপনার তথ্য আপনার ব্যক্তিগত অ্যাকাউন্টে সিঙ্ক হবে।</div></aside><main id="main" class="main"><div class="loading">অ্যাপ লোড হচ্ছে…</div></main></div><footer>Doctor Content Engine · বাংলা সংস্করণ · চিকিৎসকের যাচাই ছাড়া কোনো কনটেন্ট প্রকাশ করবেন না।</footer><script>
+</style></head><body><header class="top"><div class="brand"><div class="logo">✚</div><div><b>Doctor Content Engine</b><small>ডাক্তারদের সম্পূর্ণ বাংলা কনটেন্ট সহকারী</small></div></div><div class="auth-actions"><button class="logout-btn" id="logoutBtn" hidden>লগআউট</button><button class="menu" id="menuBtn">☰</button></div></header><div id="loginScreen" class="login-wrap"><div class="login-card"><h2>Doctor Content Engine</h2><p>আপনার ইমেইল ও পাসওয়ার্ড দিয়ে লগইন করুন। নতুন ডাক্তার হলে রেজিস্ট্রেশন করে অ্যাডমিনের অনুমোদনের অপেক্ষা করুন।</p><form id="loginForm"><label for="loginEmail">ইমেইল</label><input id="loginEmail" type="email" autocomplete="username" required placeholder="আপনার ইমেইল"><label for="loginPassword">পাসওয়ার্ড</label><input id="loginPassword" type="password" autocomplete="current-password" required placeholder="পাসওয়ার্ড"><button type="submit" id="loginSubmit">লগইন করুন</button><div id="loginError" class="login-error" role="alert"></div></form><div class="actions"><button type="button" class="btn secondary" id="showRegister" style="width:100%">নতুন ডাক্তার? রেজিস্ট্রেশন করুন</button></div><form id="registerForm" hidden><h3 style="margin-top:18px">নতুন ডাক্তার রেজিস্ট্রেশন</h3><label for="registerEmail">আপনার ইমেইল</label><input id="registerEmail" type="email" required placeholder="আপনার ইমেইল"><label for="registerPassword">নিজের পাসওয়ার্ড তৈরি করুন</label><input id="registerPassword" type="password" minlength="6" required placeholder="কমপক্ষে ৬ অক্ষর"><button type="submit" id="registerSubmit">রেজিস্ট্রেশন করুন</button><div id="registerError" class="login-error" role="alert"></div><button type="button" class="logout-btn" id="backToLogin" style="width:100%;margin-top:8px">লগইনে ফিরে যান</button></form><div class="cloud-note">আপনার প্রোফাইল ও সেভ করা কনটেন্ট নিরাপদে আপনার অ্যাকাউন্টে সংরক্ষিত হবে।</div></div></div><div class="shell" id="appShell" hidden><aside class="sidebar" id="sidebar"><div class="side-label">মূল মেনু</div><button class="nav active" data-page="home">⌂ <span>ড্যাশবোর্ড</span></button><button class="nav" data-page="profile">♙ <span>১. ডাক্তার প্রোফাইল</span></button><button class="nav" data-page="formulas">▦ <span>২. ১৮টি কনটেন্ট ফর্মুলা</span></button><button class="nav" data-page="learning">▤ <span>৩. AI Learning Guide</span></button><button class="nav" data-page="design">▧ <span>৪. Design Studio</span></button><button class="nav" data-page="gallery">▧ <span>৫. Sample Design Gallery</span></button><button class="nav" data-page="appointment">▣ <span>৬. Appointment Post</span></button><button class="nav" data-page="ads">◉ <span>৭. Facebook Ads Help</span></button><button class="nav" data-page="saved">▣ <span>৮. My Content</span></button><button class="nav" id="adminNav" data-page="admin" hidden>⚙ <span>Admin Panel</span></button><div class="sidebar-note">আপনার তথ্য আপনার ব্যক্তিগত অ্যাকাউন্টে সিঙ্ক হবে।</div></aside><main id="main" class="main"><div class="loading">অ্যাপ লোড হচ্ছে…</div></main></div><footer>Doctor Content Engine · বাংলা সংস্করণ · চিকিৎসকের যাচাই ছাড়া কোনো কনটেন্ট প্রকাশ করবেন না।</footer><script>
 /* Doctor Content Engine — 18 formula library. Names and output structures follow the supplied 20-page PDF. */
 window.FORMULAS = [
 {id:1,name:'ব্র্যান্ড স্টোরি',en:'Brand Story',tag:'আবেগ ও মানবিক ডাক্তার',purpose:'বিশ্বাস এবং আত্মিক সম্পর্ক তৈরি করা',psych:'চিকিৎসকের মানবিক দর্শন, বাস্তব সংগ্রাম ও পেশাগত অঙ্গীকারের সত্য গল্প তুলে ধরা।',fields:['দর্শন/সংগ্রাম','বাস্তব অভিজ্ঞতা বা অনুপ্রেরণা'],outputs:['৩টি হুক: Pattern Interrupt, Cognitive Dissonance, Action Statement','যাচাইযোগ্য পরিসংখ্যান (প্রযোজ্য হলে)','মানবিক Professional Facebook Ad Copy','CTA','Lovart.ai ডার্ক টিল 1:1 ডিজাইন প্রম্পট; অন্তত ৩টি বাংলা টেক্সট','১৫-সেকেন্ডের Reel: Hook, Struggle, CTA','৯:১৬ Reel Thumbnail Prompt','Short Caption + ৫টি প্রাসঙ্গিক Hashtag'],tip:'নিজের গল্প মনে না পড়লে AI-কে আপনার স্পেশালিটির চিকিৎসকদের বাস্তব জীবনের ৫টি মানবিক গল্পের আইডিয়া চাইতে বলুন।',style:'মানবিক, আবেগপূর্ণ, বিশ্বাসযোগ্য; ডার্ক টিল ভিজ্যুয়াল'},
@@ -42,7 +42,7 @@ window.FORMULAS = [
 
 </script><script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
-import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
 import { getFirestore, doc, getDoc, setDoc, serverTimestamp, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -84,6 +84,10 @@ const appShell = document.getElementById('appShell');
 const loginForm = document.getElementById('loginForm');
 const loginError = document.getElementById('loginError');
 const loginSubmit = document.getElementById('loginSubmit');
+const registerForm = document.getElementById('registerForm');
+const registerError = document.getElementById('registerError');
+const registerSubmit = document.getElementById('registerSubmit');
+let registrationInProgress = false;
 const logoutBtn = document.getElementById('logoutBtn');
 let cloudUid = null, cloudSaveTimer = null, cloudReady = false;
 
@@ -92,6 +96,42 @@ loginForm.addEventListener('submit', async (e) => {
   try { await signInWithEmailAndPassword(auth, document.getElementById('loginEmail').value.trim(), document.getElementById('loginPassword').value); }
   catch (err) { loginError.textContent = 'ইমেইল অথবা পাসওয়ার্ড সঠিক নয়। আবার চেষ্টা করুন।'; }
   finally { loginSubmit.disabled = false; loginSubmit.textContent = 'লগইন করুন'; }
+});
+document.getElementById('showRegister').addEventListener('click',()=>{
+  document.getElementById('loginForm').hidden=true;
+  registerForm.hidden=false;
+  registerError.textContent='';
+});
+document.getElementById('backToLogin').addEventListener('click',()=>{
+  registerForm.hidden=true;
+  document.getElementById('loginForm').hidden=false;
+  registerError.textContent='';
+});
+registerForm.addEventListener('submit',async e=>{
+  e.preventDefault();
+  registerError.textContent='';
+  registerSubmit.disabled=true;
+  registerSubmit.textContent='রেজিস্ট্রেশন হচ্ছে…';
+  registrationInProgress=true;
+  try{
+    const email=document.getElementById('registerEmail').value.trim().toLowerCase();
+    const password=document.getElementById('registerPassword').value;
+    const credential=await createUserWithEmailAndPassword(auth,email,password);
+    await setDoc(doc(db,'registrationRequests',credential.user.uid),{email,status:'pending',createdAt:serverTimestamp()});
+    registerError.textContent='রেজিস্ট্রেশন জমা হয়েছে। অ্যাডমিন অনুমোদন দিলে আপনি লগইন করতে পারবেন।';
+    registerForm.reset();
+    await signOut(auth);
+    registerForm.hidden=true;
+    document.getElementById('loginForm').hidden=false;
+    loginError.textContent='রেজিস্ট্রেশন জমা হয়েছে। Admin অনুমোদন দিলে আপনার অ্যাকাউন্ট চালু হবে।';
+  }catch(err){
+    registerError.textContent=err.code==='auth/email-already-in-use'?'এই ইমেইল দিয়ে আগে অ্যাকাউন্ট খোলা হয়েছে। লগইন করুন।':(err.code==='auth/weak-password'?'পাসওয়ার্ড কমপক্ষে ৬ অক্ষরের হতে হবে।':'রেজিস্ট্রেশন হয়নি। ইমেইল ও ইন্টারনেট সংযোগ পরীক্ষা করুন।');
+    if(auth.currentUser) await signOut(auth);
+  }finally{
+    registrationInProgress=false;
+    registerSubmit.disabled=false;
+    registerSubmit.textContent='রেজিস্ট্রেশন করুন';
+  }
 });
 logoutBtn.addEventListener('click', async () => { await signOut(auth); });
 
@@ -106,8 +146,17 @@ onAuthStateChanged(auth, async (user) => {
     localStorage.removeItem('dce_profile_v1'); localStorage.removeItem('dce_saved_v1');
     showLogin(); return;
   }
+  if(registrationInProgress) return;
   loginError.textContent=''; loginScreen.hidden=false; appShell.hidden=true;
   try {
+    if(user.uid !== ADMIN_UID){
+      const requestSnap=await getDoc(doc(db,'registrationRequests',user.uid));
+      if(!requestSnap.exists() || requestSnap.data().status !== 'approved'){
+        loginError.textContent=requestSnap.exists()?'আপনার অ্যাকাউন্ট এখনো অ্যাডমিন অনুমোদন করেননি। অনুমোদনের পর লগইন করুন।':'এই অ্যাকাউন্টের অনুমোদন পাওয়া যায়নি। Admin-এর সঙ্গে যোগাযোগ করুন।';
+        await signOut(auth);
+        return;
+      }
+    }
     const ref=doc(db,'doctors',user.uid), snap=await getDoc(ref);
     const data=snap.exists()?snap.data():{};
     const cloudProfile=data.profile && typeof data.profile==='object'?data.profile:{};
@@ -153,7 +202,7 @@ async function adminPage(){
   if(!window.dceIsAdmin){ main.innerHTML='<div class="notice">এই বিভাগটি শুধু অ্যাডমিনের জন্য।</div>'; return; }
   main.innerHTML=`<h2 class="section-title">Admin Panel</h2>
   <p class="sub">ডাক্তারের তথ্য ও পেমেন্টের রেকর্ড এখানে রাখুন।</p>
-  <div class="notice"><b>গুরুত্বপূর্ণ:</b> এখানে রাখা Active/Paused হলো শুধু আপনার রেকর্ড। এটি ডাক্তারের Firebase Login নিজে থেকে বন্ধ করে না। নতুন Login অ্যাকাউন্ট Firebase Console → Authentication → Users থেকে তৈরি করতে হবে।</div>
+  <div class="notice"><b>গুরুত্বপূর্ণ:</b> এখানে রাখা Active/Paused হলো শুধু আপনার রেকর্ড। এটি ডাক্তারের Firebase Login নিজে থেকে বন্ধ করে না। নতুন ডাক্তাররা Login স্ক্রিন থেকে নিজেরাই Register করবেন। এখানে Pending Registration থেকে Approve করতে হবে।</div>
   <div class="card" style="margin-top:16px">
     <h3>নতুন ডাক্তারের রেকর্ড</h3>
     <form id="adminDoctorForm">
@@ -168,7 +217,7 @@ async function adminPage(){
       <div id="adminMsg" class="cloud-note" role="status"></div>
     </form>
   </div>
-  <div class="card" style="margin-top:16px"><h3>ডাক্তার তালিকা</h3><div id="adminDoctorList">তালিকা লোড হচ্ছে…</div></div>`;
+  <div class="card" style="margin-top:16px"><h3>নতুন রেজিস্ট্রেশন — অনুমোদনের অপেক্ষায়</h3><div id="pendingRegistrationList">তালিকা লোড হচ্ছে…</div></div><div class="card" style="margin-top:16px"><h3>ডাক্তার তালিকা</h3><div id="adminDoctorList">তালিকা লোড হচ্ছে…</div></div>`;
   const form=document.getElementById('adminDoctorForm');
   const msg=document.getElementById('adminMsg');
   async function refresh(){
@@ -192,14 +241,33 @@ async function adminPage(){
       }));
     }catch(e){box.innerHTML='<p class="login-error">তালিকা লোড হয়নি। Firestore Rules ঠিকমতো প্রকাশ হয়েছে কি না দেখুন।</p>';}
   }
+  async function refreshPending(){
+    const box=document.getElementById('pendingRegistrationList');
+    box.textContent='তালিকা লোড হচ্ছে…';
+    try{
+      const snap=await getDocs(collection(db,'registrationRequests'));
+      const rows=snap.docs.map(d=>({id:d.id,...d.data()})).filter(r=>r.status==='pending');
+      if(!rows.length){box.innerHTML='<p class="sub">এখন কোনো Pending Registration নেই।</p>';return;}
+      box.innerHTML=rows.map(r=>`<div style="padding:12px 0;border-bottom:1px solid var(--line)"><b>${esc(r.email||'ইমেইল নেই')}</b><div class="cloud-note">স্ট্যাটাস: অনুমোদনের অপেক্ষায়</div><div class="actions"><button class="btn" type="button" data-approve="${esc(r.id)}">Approve / অনুমোদন দিন</button></div></div>`).join('');
+      box.querySelectorAll('[data-approve]').forEach(btn=>btn.addEventListener('click',async()=>{
+        btn.disabled=true;btn.textContent='অনুমোদন হচ্ছে…';
+        try{
+          await setDoc(doc(db,'registrationRequests',btn.getAttribute('data-approve')),{status:'approved',approvedAt:serverTimestamp()},{merge:true});
+          await refreshPending();
+          alert('ডাক্তারের অ্যাকাউন্ট অনুমোদন করা হয়েছে।');
+        }catch(err){btn.disabled=false;btn.textContent='Approve / অনুমোদন দিন';alert('অনুমোদন হয়নি। Firestore Rules পরীক্ষা করুন।');}
+      }));
+    }catch(err){box.innerHTML='<p class="login-error">Pending তালিকা লোড হয়নি। Firestore Rules প্রকাশ হয়েছে কি না দেখুন।</p>';}
+  }
   form.addEventListener('submit',async e=>{
     e.preventDefault(); msg.textContent='সংরক্ষণ হচ্ছে…';
     const data=Object.fromEntries(new FormData(form).entries());
     try{await window.dceAdmin.saveDoctor(data);msg.textContent='ডাক্তারের রেকর্ড সংরক্ষিত হয়েছে।';form.reset();await refresh();}
     catch(err){msg.textContent='সংরক্ষণ হয়নি। Firestore Rules পরীক্ষা করুন।';}
   });
-  document.getElementById('adminRefresh').addEventListener('click',refresh);
+  document.getElementById('adminRefresh').addEventListener('click',()=>{refresh();refreshPending();});
   await refresh();
+  await refreshPending();
 }
 
 function home(){const count=saved.length;const folders=[['profile','👨‍⚕️','১. ডাক্তার প্রোফাইল','নাম, ডিগ্রি, চেম্বার ও যোগাযোগের তথ্য সংরক্ষণ করুন।','প্রোফাইল খুলুন'],['formulas','📚','২. ১৮টি কনটেন্ট ফর্মুলা','প্রতিটি ফর্মুলার উদ্দেশ্য, সাইকোলজি, ইনপুট, আউটপুট ও বিশেষ নির্দেশিকা।','১৮টি ফর্মুলা দেখুন'],['gallery','🖼️','৩. Sample Design Gallery','১৮টি কনটেন্টের জন্য নমুনা ডিজাইন ধারণা দেখুন।','ডিজাইন দেখুন'],['design','🎨','৪. AI Design Studio','Lovart AI ও Gemini-র জন্য ডিজাইন প্রম্পট তৈরি করুন।','ডিজাইন তৈরি করুন'],['appointment','📅','৫. Appointment Post','ডাক্তারের চেম্বার ও সিরিয়াল ঘোষণার Facebook পোস্ট তৈরি করুন।','পোস্ট তৈরি করুন'],['ads','📣','৬. Facebook Ads Help','নিজে বিজ্ঞাপন শেখা বা বিজ্ঞাপন পরিচালনায় সহায়তার নির্দেশিকা।','বিজ্ঞাপন সহায়তা'],['learning','🤖','৭. AI Learning Guide','ChatGPT ও Google AI Studio-তে প্রম্পট ব্যবহারের ধাপ শিখুন।','শেখা শুরু করুন'],['saved','🗂️','৮. My Content','তৈরি করা প্রম্পট ও কনটেন্ট এখানে সেভ থাকবে।',`${count}টি সেভ করা`]];main.innerHTML=`<section class="hero"><div class="eyebrow">DOCTOR-ONLY CONTENT WORKSPACE</div><h1>Doctor Content Engine</h1><p>চিকিৎসকদের নিজের প্রফেশনাল পরিচিতি, স্বাস্থ্যসচেতনতা, Facebook পোস্ট, রিল, ডিজাইন ও বিজ্ঞাপন প্রস্তুতির বাংলা সহকারী।</p><div class="actions"><button class="btn" data-go="profile">প্রথমে ডাক্তার প্রোফাইল পূরণ করুন</button><button class="btn secondary" data-go="formulas">১৮টি কনটেন্ট ফর্মুলা</button></div></section><div class="folder-heading"><h2>আপনার কাজের বিভাগ</h2><p>যে বিভাগে কাজ করতে চান, ছবিযুক্ত কার্ডে চাপ দিন।</p></div><div class="folder-grid">${folders.map(([id,art,title,desc,cta])=>`<button class="folder-card" data-go="${id}"><span class="folder-art">${art}</span><span class="folder-title">${title}</span><span class="folder-desc">${desc}</span><span class="folder-cta">${cta} →</span></button>`).join('')}</div><div class="card"><h3>কাজ করার সহজ নিয়ম</h3><div class="step"><b>১</b><div><strong>ডাক্তার প্রোফাইল পূরণ</strong><p>তথ্য একবার সংরক্ষণ করুন।</p></div></div><div class="step"><b>২</b><div><strong>১৮টি ফর্মুলা থেকে নির্বাচন</strong><p>প্রতিটি ফর্মুলার নিজস্ব নির্দেশিকা ও প্রয়োজনীয় তথ্য দিন।</p></div></div><div class="step"><b>৩</b><div><strong>Master Prompt কপি করে AI-তে দিন</strong><p>ChatGPT বা Google AI Studio-তে ব্যবহার করুন।</p></div></div><div class="step"><b>৪</b><div><strong>চিকিৎসক যাচাই করে সেভ করুন</strong><p>যাচাই ছাড়া কোনো চিকিৎসা-তথ্য বা বিজ্ঞাপন প্রকাশ করবেন না।</p></div></div></div><div class="notice"><b>গুরুত্বপূর্ণ:</b> এটি শুধু ডাক্তারদের ব্যবহারের কনটেন্ট-তৈরির অ্যাপ। রোগীদের জন্য অ্যাপয়েন্টমেন্ট বুকিং বা রোগীর তথ্য সংগ্রহের ব্যবস্থা নয়। AI নিজে অ্যাপের মধ্যে চলে না; এটি নিরাপদ নির্দেশনাসহ Master Prompt তৈরি করে, যা ChatGPT বা Google AI Studio-তে ব্যবহার করতে হবে।</div>`;bindGo();}
